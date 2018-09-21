@@ -31,7 +31,7 @@ bot.on('message', message => {
         break;
 
         case 'help':
-            message.reply("besoin d'aide ? \nPour l'instant mes commandes sont : \nping : renvoi pong \npong : renvoi ping \ngao : gentil petit dinosaure \nhaikyuu : meme aléatoire d'Haikyuu!!");
+            message.reply("besoin d'aide ? \nPour l'instant mes commandes sont : \nping : renvoi pong \npong : renvoi ping \ngao : gentil petit dinosaure \nhaikyuu : meme aléatoire d'Haikyuu!! \nvideo : envoi une vidéo de IDOLiSH7/TRIGGER/Re:vale");
         break;
 
         case 'gao':
@@ -87,6 +87,7 @@ bot.on('message', message => {
 
             message.channel.send(videos[i]);
         
+        break;
 
 
 
