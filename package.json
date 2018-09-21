@@ -4,7 +4,9 @@
   "description": "(help : */help)",
   "main": "Ten-nii.js",
   "author": "Kainnaly",
-  "start": "node Ten-nii.js",
+  "scripts": {
+    "start": "node Ten-nii.js"
+  },
   "dependencies": {
     "discord.io": "^2.5.3",
     "discord.js": "^11.4.2",
