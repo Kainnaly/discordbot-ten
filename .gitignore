@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# Tests directories
+Tests/
+
+# json token
+auth.json
+
+# cache git 
+.git
