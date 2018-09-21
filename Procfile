@@ -1,1 +1,1 @@
-web: npm start
+worker: node Ten-nii.js
