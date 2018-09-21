@@ -1,1 +1,1 @@
-web: node Ten-nii.js
+web: npm start
