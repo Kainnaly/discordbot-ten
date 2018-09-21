@@ -1,1 +1,1 @@
-worker: node Ten-nii.js
+web: node Ten-nii.js
