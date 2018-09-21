@@ -89,6 +89,11 @@ bot.on('message', message => {
         
         break;
 
+        case 'nope':
+            message.channel.send("Yada.", {
+                file: "ims/nope.jpg"
+            })
+        break;
 
 
     }
