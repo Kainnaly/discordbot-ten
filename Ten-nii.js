@@ -67,7 +67,27 @@ bot.on('message', message => {
         break;
 
 
-    // case 'video'
+        case 'video':
+            //Diamond Fusion 3 fois parce que c'est la meilleure
+            var videos = ['https://youtu.be/Cj17Lh3QAM8',
+                'https://youtu.be/VLNZVGDp9jg',
+                'https://youtu.be/WMBdSdUKo6Y',
+                'https://youtu.be/WMBdSdUKo6Y',
+                'https://youtu.be/WMBdSdUKo6Y'
+                'https://youtu.be/aoCPwWt_wr4',
+                'https://youtu.be/yacHD29uSVc',
+                'https://youtu.be/DBSZIt9z9eg',
+                'https://youtu.be/kkIWH6dHRYE',
+                'https://youtu.be/stz_2EpFvgE'
+                ];
+
+            var n = videos.length;
+
+            var i = Math.floor(Math.random() * n);
+
+            message.channel.send(videos[i]);
+        
+
 
 
     }
