@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const auth = require('./auth.json');
+// const auth = require('./auth.json');
 var prefix = '*/';
 
 bot.on('ready', () => {
@@ -67,10 +67,12 @@ bot.on('message', message => {
         break;
 
 
+    // case 'video'
 
 
     }
 });
 
 
-bot.login(auth.token)
+// bot.login(auth.token)
+bot.login(process.env.TOKEN)
