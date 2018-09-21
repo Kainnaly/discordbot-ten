@@ -73,7 +73,7 @@ bot.on('message', message => {
                 'https://youtu.be/VLNZVGDp9jg',
                 'https://youtu.be/WMBdSdUKo6Y',
                 'https://youtu.be/WMBdSdUKo6Y',
-                'https://youtu.be/WMBdSdUKo6Y'
+                'https://youtu.be/WMBdSdUKo6Y',
                 'https://youtu.be/aoCPwWt_wr4',
                 'https://youtu.be/yacHD29uSVc',
                 'https://youtu.be/DBSZIt9z9eg',
