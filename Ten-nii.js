@@ -31,7 +31,7 @@ bot.on('message', message => {
         break;
 
         case 'help':
-            message.reply("besoin d'aide ? \nPour l'instant mes commandes sont : \nping : renvoi pong \npong : renvoi ping \ngao : gentil petit dinosaure");
+            message.reply("besoin d'aide ? \nPour l'instant mes commandes sont : \nping : renvoi pong \npong : renvoi ping \ngao : gentil petit dinosaure \nhaikyuu-memes : meme aléatoire d'Haikyuu!!");
         break;
 
         case 'gao':
@@ -40,7 +40,7 @@ bot.on('message', message => {
             });
         break;
 
-        case 'haikyuumemes':
+        case 'haikyuu-memes':
             // fso = new ActiveXObject("Scripting.FileSystemObject");
             // var n = 0;
             // rep = "imgs/memes/memesHaikyuu"
@@ -65,6 +65,8 @@ bot.on('message', message => {
             })
 
         break;
+
+
 
 
     }
