@@ -54,7 +54,7 @@ bot.on("message", message => {
 
         case "help":
             var msgRep = "besoin d'aide ? \n"
-            msgRep += "Mon préfix est `*/` \n"
+            msgRep += "Mon préfixe est `*/` \n"
             msgRep += "Pour l'instant mes commandes sont : \n"
             msgRep += "`ping` : renvoi pong \n"
             msgRep += "`pong` : renvoi ping \n"
