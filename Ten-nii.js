@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+
+// Décommenter const auth si en local avec node Ten-nii.js
 // const auth = require('./auth.json');
+
 var prefix = "*/";
 
 bot.on("ready", () => {
@@ -11,15 +14,29 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
 
-    if (!message.content.startsWith(prefix) ) return;
-        // && 
-        // (!message.content.indexOf("<@492396386906800148>") > -1) &&
-        // (!message.content.indexOf("@Ten-nii") > -1) ) return;
-    // 492396386906800148
-    // anderson : 424318724242407424
+    console.log("indexof<@4... : " + message.content.indexOf("<@492396386906800148>"));
+    console.log("indexof@Ten... : " + message.content.indexOf("@Ten-nii"));
+    
 
-    var args = message.content.slice(prefix.length).split("/ +/");
+    if ( (!message.content.startsWith(prefix)) && 
+        (message.content.indexOf("<@492396386906800148>") < -1) &&
+        (message.content.indexOf("@Ten-nii") < -1) ) {
+        return;
+    } else {
+        if (message.content.substring(0,prefix.length) == prefix) {
+            message.content = message.content.slice(prefix.length)
+            // console.log("Message : " + message)
+        } else if (message.content.substring(0,3) == "<@4") {
+            message.content = message.content.slice(22)
+            // console.log("Message : " + message)
+        }
+    }
+
+    var args = message.content.split("/ +/");
+    
     var cmd = args.shift().toLowerCase();
+
+    // console.log("cmd : " + message.content)
 
     switch(cmd) {
         // !ping
@@ -115,6 +132,8 @@ bot.on("message", message => {
     }
 });
 
+// Décommenter bot.login si en local avec node Ten-nii.js
+// Et commenter bot.login
 
 // bot.login(auth.token)
 bot.login(process.env.token)
