@@ -11,9 +11,10 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
 
-    if ( (!message.content.startsWith(prefix)) || 
-        (!message.content.indexOf("<@492396386906800148>") > -1) ||
-        (!message.content.indexOf("@Ten-nii") > -1) ) return;
+    if ( (!message.content.startsWith(prefix)) ) return;
+        // && 
+        // (!message.content.indexOf("<@492396386906800148>") > -1) &&
+        // (!message.content.indexOf("@Ten-nii") > -1) ) return;
     // 492396386906800148
     // anderson : 424318724242407424
 
