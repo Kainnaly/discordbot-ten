@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-// const auth = require('./auth.json');
+const auth = require('./auth.json');
 var prefix = "*/";
 
 bot.on("ready", () => {
@@ -11,7 +11,8 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
 
-    if ( (!message.content.startsWith(prefix)) ) return;
+    // if ( (!message.content.startsWith(prefix)) ) return;
+    if ( (!message.content.indexOf("<@492396386906800148>") > -1 ) ) return;
         // && 
         // (!message.content.indexOf("<@492396386906800148>") > -1) &&
         // (!message.content.indexOf("@Ten-nii") > -1) ) return;
@@ -116,5 +117,5 @@ bot.on("message", message => {
 });
 
 
-// bot.login(auth.token)
-bot.login(process.env.token)
+bot.login(auth.token)
+// bot.login(process.env.token)
