@@ -42,16 +42,16 @@ bot.on("message", message => {
 
 
     if (args.length>1) {
-        var deux = (args[0] + " " + args[1]).toLowerCase()
-        // console.log("Deux : " + deux);
-        switch(deux) {
-            case "t'es beau":
-                if (message.author.username == "Xeljira") {
-                    message.channel.send("Merci.")
-                } else {
-                    message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
-                }
-            break;
+        // var deux = (args[0] + " " + args[1]).toLowerCase()
+        // // console.log("Deux : " + deux);
+        // switch(deux) {
+        //     case "t'es beau":
+        //         if (message.author.username == "Xeljira") {
+        //             message.channel.send("Merci.")
+        //         } else {
+        //             message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
+        //         }
+        //     break;
         }
 
         switch(message.content.toLowerCase()) {
