@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 // Décommenter const auth si en local avec node Ten-nii.js
-const auth = require('./auth.json');
+// const auth = require('./auth.json');
 
 var prefix = "*/";
 
@@ -201,5 +201,5 @@ bot.on("message", message => {
 // Décommenter bot.login si en local avec node Ten-nii.js
 // Et commenter bot.login
 
-bot.login(auth.token)
-// bot.login(process.env.token)
+// bot.login(auth.token)
+bot.login(process.env.token)
