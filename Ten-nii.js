@@ -14,8 +14,8 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
 
-    console.log("indexof<@4... : " + message.content.indexOf("<@492396386906800148>"));
-    console.log("indexof@Ten... : " + message.content.indexOf("@Ten-nii"));
+    // console.log("indexof<@4... : " + message.content.indexOf("<@492396386906800148>"));
+    // console.log("indexof@Ten... : " + message.content.indexOf("@Ten-nii"));
     
 
     if ( (!message.content.startsWith(prefix)) && 
@@ -54,7 +54,7 @@ bot.on("message", message => {
 
         case "help":
             var msgRep = "besoin d'aide ? \n"
-            msgRep += "Mon préfixe est `*/` \n"
+            msgRep += "Mon préfixe est `*/`. \n"
             msgRep += "Pour l'instant mes commandes sont : \n"
             msgRep += "`ping` : renvoi pong \n"
             msgRep += "`pong` : renvoi ping \n"
@@ -66,9 +66,17 @@ bot.on("message", message => {
         break;
 
         case "gao":
-            message.channel.send("", {
-                file: "imgs/Gao.jpg"
+            var auteurs = ['<https://twitter.com/ucnr_senasan>','']
+            var imgs_gao = ['imgs/GaoRiku.jpg','imgs/Gao.jpg']
+
+            var n = imgs_gao.length;
+
+            var i = Math.floor(Math.random() * n);
+
+            message.channel.send(auteurs[i], {
+                file: imgs_gao[i]
             });
+
         break;
 
         case "haikyuu":
