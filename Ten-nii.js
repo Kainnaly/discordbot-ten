@@ -52,7 +52,7 @@ bot.on("message", message => {
         //             message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
         //         }
         //     break;
-        }
+        // }
 
         switch(message.content.toLowerCase()) {
             case "ça va ?":
