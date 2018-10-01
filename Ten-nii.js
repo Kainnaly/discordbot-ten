@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 // Décommenter const auth si en local avec node Ten-nii.js
-// const auth = require('./auth.json');
+const auth = require('./auth.json');
 
 var prefix = "*/";
 
@@ -14,19 +14,24 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
 
-    // console.log("indexof<@4... : " + message.content.indexOf("<@492396386906800148>"));
-    // console.log("indexof@Ten... : " + message.content.indexOf("@Ten-nii"));
-    
+    console.log("Message : " + message.content);
+    console.log(message.content.startsWith(prefix));
+    console.log("indexof<@4... : " + message.content.indexOf("<@492396386906800148>"));
+    console.log("indexof@Ten... : " + message.content.indexOf("@Ten-nii"));
+    console.log("");
+
 
     if ( (!message.content.startsWith(prefix)) && 
-        (message.content.indexOf("<@492396386906800148>") < -1) &&
-        (message.content.indexOf("@Ten-nii") < -1) ) {
+        (message.content.indexOf("<@492396386906800148>") < 0) &&
+        (message.content.indexOf("@Ten-nii") < 0) ) {
+        console.log("Return");
+        console.log("");
         return;
     } else {
         if (message.content.substring(0,prefix.length) == prefix) {
             message.content = message.content.slice(prefix.length)
             // console.log("Message : " + message)
-        } else if (message.content.substring(0,7) == "<@49239") {
+        } else if (message.content.substring(0,3) == "<@4") {
             message.content = message.content.slice(22)
             // console.log("Message : " + message)
         }
@@ -35,35 +40,35 @@ bot.on("message", message => {
     // var args = message.content.split(" ");
     var args = message.content.split(" ");
     
-    console.log("args : " + args + ". Taille : " + args.length)
+    // console.log("args : " + args + ". Taille : " + args.length)
 
     // var cmd = args.shift().toLowerCase();
 
 
 
-    if (args.length>1) {
-        // var deux = (args[0] + " " + args[1]).toLowerCase()
-        // // console.log("Deux : " + deux);
-        // switch(deux) {
-        //     case "t'es beau":
-        //         if (message.author.username == "Xeljira") {
-        //             message.channel.send("Merci.")
-        //         } else {
-        //             message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
-        //         }
-        //     break;
-        // }
+    // if (args.length>1) {
+    //     // var deux = (args[0] + " " + args[1]).toLowerCase()
+    //     // // console.log("Deux : " + deux);
+    //     // switch(deux) {
+    //     //     case "t'es beau":
+    //     //         if (message.author.username == "Xeljira") {
+    //     //             message.channel.send("Merci.")
+    //     //         } else {
+    //     //             message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
+    //     //         }
+    //     //     break;
+    //     // }
 
-        switch(message.content.toLowerCase()) {
-            case "ça va ?":
-            case "ca va ?":
-                message.channel.send("Je vais bien. ")
-            break;
-        }
+    //     switch(message.content.toLowerCase()) {
+    //         case "ça va ?":
+    //         case "ca va ?":
+    //             message.channel.send("Je vais bien. ")
+    //         break;
+    //     }
         
-    } else if (args.length==0) {
-        message.channel.send("... ? Un problème ?")
-    } else {
+    // } else if (args.length==0) {
+    //     message.channel.send("... ? Un problème ?")
+    // } else {
 
         var cmd = args[0].toLowerCase();
 
@@ -97,7 +102,8 @@ bot.on("message", message => {
                 msgRep += "`gao` : gentil petit dinosaure \n"
                 msgRep += "`haikyuu` : meme aléatoire d'Haikyuu!! \n"
                 msgRep += "`video` : envoi une vidéo de IDOLiSH7/TRIGGER/Re:vale \n"
-                msgRep += "`nope` : nope. "
+                msgRep += "`nope` : nope. \n"
+                msgRep += "`flip_table` : marre. "
                 message.reply(msgRep);
             break;
 
@@ -170,24 +176,30 @@ bot.on("message", message => {
                 })
             break;
 
+            case "flip_table":
+                message.channel.send("", {
+                    file: "imgs/flip_table.png"
+                });
+            break;
+
             case "salut": 
             case "bonjour":
             case "hey": 
             case "yosh":
             case "yop":
-                message.channel.send("Bonjour.")
+                message.channel.send("Bonjour.");
             break;
 
             // case 'zerochan':
             //     var ze = "https://www.zerochan.net/"
             //     message.channel.send(ze+"")
 
-        }
+        // }
     }
 });
 
 // Décommenter bot.login si en local avec node Ten-nii.js
 // Et commenter bot.login
 
-// bot.login(auth.token)
-bot.login(process.env.token)
+bot.login(auth.token)
+// bot.login(process.env.token)
