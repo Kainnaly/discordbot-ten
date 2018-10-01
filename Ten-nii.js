@@ -14,11 +14,11 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
 
-    console.log("Message : " + message.content);
-    console.log(message.content.startsWith(prefix));
-    console.log("indexof<@4... : " + message.content.indexOf("<@492396386906800148>"));
-    console.log("indexof@Ten... : " + message.content.indexOf("@Ten-nii"));
-    console.log("");
+    // console.log("Message : " + message.content);
+    // console.log(message.content.startsWith(prefix));
+    // console.log("indexof<@4... : " + message.content.indexOf("<@492396386906800148>"));
+    // console.log("indexof@Ten... : " + message.content.indexOf("@Ten-nii"));
+    // console.log("");
 
 
     if ( (!message.content.startsWith(prefix)) && 
@@ -46,29 +46,29 @@ bot.on("message", message => {
 
 
 
-    // if (args.length>1) {
-    //     // var deux = (args[0] + " " + args[1]).toLowerCase()
-    //     // // console.log("Deux : " + deux);
-    //     // switch(deux) {
-    //     //     case "t'es beau":
-    //     //         if (message.author.username == "Xeljira") {
-    //     //             message.channel.send("Merci.")
-    //     //         } else {
-    //     //             message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
-    //     //         }
-    //     //     break;
-    //     // }
+    if (args.length>1) {
+        var deux = (args[0] + " " + args[1]).toLowerCase()
+        // console.log("Deux : " + deux);
+        switch(deux) {
+            case "t'es beau":
+                if (message.author.username == "Xeljira") {
+                    message.channel.send("Merci.")
+                } else {
+                    message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
+                }
+            break;
+        }
 
-    //     switch(message.content.toLowerCase()) {
-    //         case "ça va ?":
-    //         case "ca va ?":
-    //             message.channel.send("Je vais bien. ")
-    //         break;
-    //     }
+        switch(message.content.toLowerCase()) {
+            case "ça va ?":
+            case "ca va ?":
+                message.channel.send("Je vais bien. ")
+            break;
+        }
         
-    // } else if (args.length==0) {
-    //     message.channel.send("... ? Un problème ?")
-    // } else {
+    } else if (args.length == 0 || message.content == "") {
+        message.channel.send("... ? Un problème ?")
+    } else {
 
         var cmd = args[0].toLowerCase();
 
@@ -194,7 +194,7 @@ bot.on("message", message => {
             //     var ze = "https://www.zerochan.net/"
             //     message.channel.send(ze+"")
 
-        // }
+        }
     }
 });
 
