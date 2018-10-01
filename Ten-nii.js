@@ -26,7 +26,7 @@ bot.on("message", message => {
         if (message.content.substring(0,prefix.length) == prefix) {
             message.content = message.content.slice(prefix.length)
             // console.log("Message : " + message)
-        } else if (message.content.substring(0,3) == "<@4") {
+        } else if (message.content.substring(0,7) == "<@49239") {
             message.content = message.content.slice(22)
             // console.log("Message : " + message)
         }
@@ -61,6 +61,8 @@ bot.on("message", message => {
             break;
         }
         
+    } else if (args.length==0) {
+        message.channel.send("... ? Un problème ?")
     } else {
 
         var cmd = args[0].toLowerCase();
