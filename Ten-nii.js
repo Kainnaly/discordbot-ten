@@ -27,7 +27,7 @@ bot.on("message", message => {
         console.log("Return");
         console.log("");
         if (message.content == "stroustrup.") {
-            message.channel.send("STROUSTRUP");
+            message.channel.send("STROUSTRUP.");
         }
         return;
     } else {
