@@ -26,6 +26,9 @@ bot.on("message", message => {
         (message.content.indexOf("@Ten-nii") < 0) ) {
         console.log("Return");
         console.log("");
+        if (message.content == "stroustrup.") {
+            message.channel.send("STROUSTRUP");
+        }
         return;
     } else {
         if (message.content.substring(0,prefix.length) == prefix) {
