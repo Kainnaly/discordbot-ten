@@ -193,6 +193,12 @@ bot.on("message", message => {
                 message.channel.send("Bonjour.");
             break;
 
+            case "f":
+            case "F":
+                message.channel.send("", {
+                    file: "imgs/F.jpg"
+                });
+
             // case 'zerochan':
             //     var ze = "https://www.zerochan.net/"
             //     message.channel.send(ze+"")
