@@ -106,7 +106,8 @@ bot.on("message", message => {
                 msgRep += "`haikyuu` : meme aléatoire d'Haikyuu!! \n"
                 msgRep += "`video` : envoi une vidéo de IDOLiSH7/TRIGGER/Re:vale \n"
                 msgRep += "`nope` : nope. \n"
-                msgRep += "`flip_table` : marre. "
+                msgRep += "`flip_table` : marre. \n"
+                msgRep += "`F` : Press F to pay respect. "
                 message.reply(msgRep);
             break;
 
