@@ -107,7 +107,8 @@ bot.on("message", message => {
                 msgRep += "`video` : envoi une vidéo de IDOLiSH7/TRIGGER/Re:vale \n"
                 msgRep += "`nope` : nope. \n"
                 msgRep += "`flip_table` : marre. \n"
-                msgRep += "`F` : Press F to pay respect. "
+                msgRep += "`F` : Press F to pay respect.\n"
+                msgRep += "`Modao` : Gif de Mo Dao Zu Shi (GDC)."
                 message.reply(msgRep);
             break;
 
@@ -199,6 +200,7 @@ bot.on("message", message => {
                 message.channel.send("", {
                     file: "imgs/F.jpg"
                 });
+            break;
 
             case "Modao":
             case "modao":
@@ -214,6 +216,7 @@ bot.on("message", message => {
                 message.channel.send("", {
                     file: gifs[i]
                 });
+            break;
 
             // case 'zerochan':
             //     var ze = "https://www.zerochan.net/"
