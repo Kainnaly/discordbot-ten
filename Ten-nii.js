@@ -7,8 +7,8 @@ const bot = new Discord.Client();
 var prefix = "*/";
 
 bot.on("ready", () => {
-  console.log("Ohayoo. ");
-  bot.user.setActivity("Being angry to Riku.");
+    console.log("Ohayoo. ");
+    bot.user.setActivity("Being angry to Riku.");
 });
 
 
@@ -21,9 +21,9 @@ bot.on("message", message => {
     // console.log("");
 
 
-    if ( (!message.content.startsWith(prefix)) && 
+    if ((!message.content.startsWith(prefix)) &&
         (message.content.indexOf("<@492396386906800148>") < 0) &&
-        (message.content.indexOf("@Ten-nii") < 0) ) {
+        (message.content.indexOf("@Ten-nii") < 0)) {
         console.log("Return");
         console.log("");
         if (message.content == "stroustrup.") {
@@ -31,10 +31,10 @@ bot.on("message", message => {
         }
         return;
     } else {
-        if (message.content.substring(0,prefix.length) == prefix) {
+        if (message.content.substring(0, prefix.length) == prefix) {
             message.content = message.content.slice(prefix.length)
             // console.log("Message : " + message)
-        } else if (message.content.substring(0,3) == "<@4") {
+        } else if (message.content.substring(0, 3) == "<@4") {
             message.content = message.content.slice(22)
             // console.log("Message : " + message)
         }
@@ -42,33 +42,33 @@ bot.on("message", message => {
 
     // var args = message.content.split(" ");
     var args = message.content.split(" ");
-    
+
     // console.log("args : " + args + ". Taille : " + args.length)
 
     // var cmd = args.shift().toLowerCase();
 
 
 
-    if (args.length>1) {
+    if (args.length > 1) {
         var deux = (args[0] + " " + args[1]).toLowerCase()
         // console.log("Deux : " + deux);
-        switch(deux) {
+        switch (deux) {
             case "t'es beau":
                 if (message.author.username == "Xeljira") {
                     message.channel.send("Merci.")
                 } else {
                     message.channel.send("Ah ... Merci. Mais pas autant que toi. ")
                 }
-            break;
+                break;
         }
 
-        switch(message.content.toLowerCase()) {
+        switch (message.content.toLowerCase()) {
             case "ça va ?":
             case "ca va ?":
                 message.channel.send("Je vais bien. ")
-            break;
+                break;
         }
-        
+
     } else if (args.length == 0 || message.content == "") {
         message.channel.send("... ? Un problème ?")
     } else {
@@ -78,11 +78,11 @@ bot.on("message", message => {
         // console.log("cmd : " + message.content)
 
         // if (args>1) {
-            // console.log(args.length);
-            // console.log("cmd : " + cmd)
+        // console.log(args.length);
+        // console.log("cmd : " + cmd)
         // }
 
-        switch(cmd) {
+        switch (cmd) {
             // !ping
             case "ping":
                 message.channel.send("Pong !")
@@ -90,11 +90,11 @@ bot.on("message", message => {
                 //     to: channelID,
                 //     message: 'Pong!'
                 // });
-            break;
+                break;
 
             case "pong":
                 message.channel.send("Ping-")
-            break;
+                break;
 
             case "help":
                 var msgRep = "besoin d'aide ? \n"
@@ -110,11 +110,11 @@ bot.on("message", message => {
                 msgRep += "`F` : Press F to pay respect.\n"
                 msgRep += "`Modao` : Gif de Mo Dao Zu Shi (GDC)."
                 message.reply(msgRep);
-            break;
+                break;
 
             case "gao":
-                var auteurs = ['<https://twitter.com/ucnr_senasan>','']
-                var imgs_gao = ['imgs/GaoRiku.jpg','imgs/Gao.jpg']
+                var auteurs = ['<https://twitter.com/ucnr_senasan>', '']
+                var imgs_gao = ['imgs/GaoRiku.jpg', 'imgs/Gao.jpg']
 
                 var n = imgs_gao.length;
 
@@ -124,13 +124,13 @@ bot.on("message", message => {
                     file: imgs_gao[i]
                 });
 
-            break;
+                break;
 
             case "haikyuu":
                 // fso = new ActiveXObject("Scripting.FileSystemObject");
                 // var n = 0;
                 // rep = "imgs/memes/memesHaikyuu"
-                
+
                 // function lit_fic(rep) {
                 //     var f,ff=""
                 //     f = fso.GetFolder(rep)
@@ -150,7 +150,7 @@ bot.on("message", message => {
                     file: rep + "/meme" + i + ".jpg"
                 })
 
-            break;
+                break;
 
 
             case "video":
@@ -165,62 +165,62 @@ bot.on("message", message => {
                     "https://youtu.be/DBSZIt9z9eg",
                     "https://youtu.be/kkIWH6dHRYE",
                     "https://youtu.be/stz_2EpFvgE"
-                    ];
+                ];
 
-                var n = videos.length;
+                var video_len = videos.length;
 
-                var i = Math.floor(Math.random() * n);
+                var video_i = Math.floor(Math.random() * video_len);
 
-                message.channel.send(videos[i]);
-            
-            break;
+                message.channel.send(videos[video_i]);
+
+                break;
 
             case "nope":
                 message.channel.send("Yada.", {
                     file: "imgs/nope.jpg"
-                })
-            break;
+                });
+                break;
 
             case "flip_table":
                 message.channel.send("", {
                     file: "imgs/flip_table.png"
                 });
-            break;
+                break;
 
-            case "salut": 
+            case "salut":
             case "bonjour":
-            case "hey": 
+            case "hey":
             case "yosh":
             case "yop":
                 message.channel.send("Bonjour.");
-            break;
+                break;
 
             case "f":
             case "F":
                 message.channel.send("", {
                     file: "imgs/F.jpg"
                 });
-            break;
+                break;
 
             case "Modao":
             case "modao":
                 var gifs = [
-                    "imgs/gifs/WeiWuxian",
-                    "imgs/gifs/WeiWuxian2"
+                    "imgs/gifs/WeiWuxian.gif",
+                    "imgs/gifs/WeiWuxian2.gif"
                 ];
 
-                var n = gifs.length;
+                var gifs_n = gifs.length;
 
-                var i = Math.floor(Math.random() * n);
+                var gifs_i = Math.floor(Math.random() * gifs_n);
 
                 message.channel.send("", {
-                    file: gifs[i]
+                    file: gifs[gifs_i]
                 });
-            break;
+                break;
 
-            // case 'zerochan':
-            //     var ze = "https://www.zerochan.net/"
-            //     message.channel.send(ze+"")
+                // case 'zerochan':
+                //     var ze = "https://www.zerochan.net/"
+                //     message.channel.send(ze+"")
 
         }
     }
