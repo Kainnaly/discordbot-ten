@@ -201,8 +201,18 @@ bot.on("message", message => {
                 });
 
             case "Modao":
+            case "modao":
+                var gifs = [
+                    "imgs/gifs/WeiWuxian",
+                    "imgs/gifs/WeiWuxian2"
+                ];
+
+                var n = gifs.length;
+
+                var i = Math.floor(Math.random() * n);
+
                 message.channel.send("", {
-                    file: "imgs/gifs/WeiWuxian"
+                    file: gifs[i]
                 });
 
             // case 'zerochan':
