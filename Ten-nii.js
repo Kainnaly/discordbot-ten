@@ -200,6 +200,11 @@ bot.on("message", message => {
                     file: "imgs/F.jpg"
                 });
 
+            case "Modao":
+                message.channel.send("", {
+                    file: "imgs/gifs/WeiWuxian"
+                });
+
             // case 'zerochan':
             //     var ze = "https://www.zerochan.net/"
             //     message.channel.send(ze+"")
